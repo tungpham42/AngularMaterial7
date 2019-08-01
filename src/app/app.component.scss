@@ -1,0 +1,121 @@
+.tp-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.tp-full-width {
+  width: 100%;
+}
+.tp-h2 {
+  margin: 10px;
+}
+.tp-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.tp-margin {
+  margin: 30px;
+}
+.tp-container {
+  display: flex;
+  flex-direction: column;
+}
+.tp-container > * {
+  width: 100%;
+}
+.tp-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+.tp-radio-button {
+  margin: 5px;
+}
+.tp-selected-value {
+  margin: 15px 0;
+}
+.mat-slider-horizontal {
+  width: 300px;
+}
+.mat-slider-vertical {
+  height: 300px;
+}
+.tp-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+  width:100px;   
+}
+.tp-container-side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+.filler {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 10px;
+}
+.tp-card {
+  max-width: 400px;
+}
+.tp-header-image {
+  background-image: url('https://tungpham42.info/wp-content/uploads/2018/09/profile.jpg');
+  background-size: cover;
+}
+.mat-grid-tile {
+  background: navy;
+}
+.tp-button-row button,
+.tp-button-row a {
+  margin-right: 8px;
+}
+.tp-selected-value {
+  margin: 15px 0;
+}
+.tp-section-spinner {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.tp-margin-spinner {
+  margin: 0 10px;
+}
+.tp-section-bar {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.tp-margin-bar {
+  margin: 0 10px;
+}
+.tp-ripple-container {
+  cursor: pointer;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.tp-ripple-checkbox {
+  margin: 6px 12px 6px 0;
+}
+.tp-ripple-form-field {
+  margin: 0 12px 0 0;
+}
+table {
+  width: 100%;
+}
