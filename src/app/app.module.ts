@@ -11,6 +11,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BMIComponent} from './bmi/bmi.component';
 
 const appRoutes: Routes = [
+  { path: '', component: AppComponent },
   { path: 'bmi', component: BMIComponent }
 ]
 
