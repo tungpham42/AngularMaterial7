@@ -1,0 +1,22 @@
+#bmi_app {
+  box-sizing: content-box;
+  * {
+    box-sizing: content-box !important;
+  }
+  .input-group-prepend {
+    .input-group-text {
+      background-color: #2d2d2d;
+      color: white;
+    }
+    + input {
+      background-color: white;
+      color: #2d2d2d;
+    }
+  }
+  .input-group-append {
+    .input-group-text {
+      background-color: #2d2d2d;
+      color: white;
+    }
+  }
+}
