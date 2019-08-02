@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-bmi',
   templateUrl: './bmi.component.html',
   styleUrls: ['./bmi.component.scss']
 })
+export class BmiComponent implements OnInit {
 
-export class BMIComponent {
-  title="Chỉ số khối cơ thể";
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
