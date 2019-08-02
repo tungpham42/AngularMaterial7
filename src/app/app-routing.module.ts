@@ -8,9 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { BmiComponent } from './bmi/bmi.component';
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'bmi', component: BmiComponent},
+  {path: 'bmi', component: BmiComponent},  
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 @NgModule({
