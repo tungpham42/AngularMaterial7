@@ -1,25 +1,25 @@
-<mat-sidenav-container class = "tp-container-side">
-  <mat-sidenav mode = "side" opened>
-    <section class = "tp-section">
+<mat-sidenav-container class="tp-container-side">
+  <mat-sidenav mode="side" opened>
+    <section class="tp-section">
       <span>File</span>
     </section>
-    <section class = "tp-section">
+    <section class="tp-section">
       <span>Edit</span>
     </section>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-button [matMenuTriggerFor] = "menu">File</button>
-    <mat-menu #menu = "matMenu">
+    <button mat-button [matMenuTriggerFor]="menu">File</button>
+    <mat-menu #menu="matMenu">
       <button mat-menu-item>New</button>
       <button mat-menu-item>Open</button>
-      <button mat-menu-item [matMenuTriggerFor] = "recent">Recent</button>
+      <button mat-menu-item [matMenuTriggerFor]="recent">Recent</button>
     </mat-menu>
-    <mat-menu #recent = "matMenu">
+    <mat-menu #recent="matMenu">
       <button mat-menu-item>File 1</button>
       <button mat-menu-item>File 2</button>
     </mat-menu>
-    <mat-toolbar color = "primary">
-      <span class = "gap">File</span>
+    <mat-toolbar color="primary">
+      <span class="gap">File</span>
       <span>Edit</span>
       <span class="filler"></span>
       <span>About</span>
@@ -44,96 +44,96 @@
       </li>
     </ul>
     
-    <form class = "tp-form">
-      <mat-form-field class = "tp-full-width">
-        <input type = "text" 
-          placeholder = "US State" 
-          aria-label = "Number" 
+    <form class="tp-form">
+      <mat-form-field class="tp-full-width">
+        <input type="text" 
+          placeholder="US State" 
+          aria-label="Number" 
           matInput 
-          [formControl] = "myControl" 
-          [matAutocomplete] = "auto">
-        <mat-autocomplete #auto = "matAutocomplete">
-          <mat-option *ngFor = "let state of states" [value] = "state.value">
+          [formControl]="myControl" 
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let state of states" [value]="state.value">
             {{state.display}}
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
     </form>
-    <h2 class = "tp-h2">Checkbox configuration</h2>
-    <section class = "tp-section">
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "firstChecked">Checked</mat-checkbox>
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "indeterminate">Indeterminate</mat-checkbox>
+    <h2 class="tp-h2">Checkbox configuration</h2>
+    <section class="tp-section">
+      <mat-checkbox class="tp-margin" [(ngModel)]="firstChecked">Checked</mat-checkbox>
+      <mat-checkbox class="tp-margin" [(ngModel)]="indeterminate">Indeterminate</mat-checkbox>
     </section> 
-    <section class = "tp-section">
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "firstDisabled">Disabled</mat-checkbox>
+    <section class="tp-section">
+      <mat-checkbox class="tp-margin" [(ngModel)]="firstDisabled">Disabled</mat-checkbox>
     </section>
-    <h2 class = "tp-h2">Result</h2>
-    <section class = "tp-section">
+    <h2 class="tp-h2">Result</h2>
+    <section class="tp-section">
       <mat-checkbox
-        class = "tp-margin"
-        [(ngModel)] = "firstChecked"
-        [(indeterminate)] = "indeterminate"
-        [labelPosition] = "labelPosition"
-        [disabled] = "firstDisabled">
+        class="tp-margin"
+        [(ngModel)]="firstChecked"
+        [(indeterminate)]="indeterminate"
+        [labelPosition]="labelPosition"
+        [disabled]="firstDisabled">
         Sample Checkbox
       </mat-checkbox>
     </section>
     <mat-form-field>
-      <input matInput [matDatepicker] = "picker" placeholder = "Choose a date">
-      <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-    <div class = "tp-container">
-      <mat-form-field appearance = "standard">
-        <input matInput placeholder = "Input">
+    <div class="tp-container">
+      <mat-form-field appearance="standard">
+        <input matInput placeholder="Input">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Sample Hint</mat-hint>
       </mat-form-field>
-      <mat-form-field appearance = "fill">
-        <textarea matInput placeholder = "Textarea"></textarea>
+      <mat-form-field appearance="fill">
+        <textarea matInput placeholder="Textarea"></textarea>
       </mat-form-field>
-      <mat-form-field appearance = "outline">
-        <mat-select placeholder = "Select">
-          <mat-option value = "A">A</mat-option>
-          <mat-option value = "B">B</mat-option>
-          <mat-option value = "C">C</mat-option>      
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="Select">
+          <mat-option value="A">A</mat-option>
+          <mat-option value="B">B</mat-option>
+          <mat-option value="C">C</mat-option>      
         </mat-select>
       </mat-form-field>
     </div>
-    <form class = "tp-form">
-      <mat-form-field class = "tp-full-width">
-        <input matInput placeholder = "Favorite Food" value = "Pasta">
+    <form class="tp-form">
+      <mat-form-field class="tp-full-width">
+        <input matInput placeholder="Favorite Food" value="Pasta">
       </mat-form-field>
-      <mat-form-field class = "tp-full-width">
-        <textarea matInput placeholder = "Enter your comment"></textarea>
+      <mat-form-field class="tp-full-width">
+        <textarea matInput placeholder="Enter your comment"></textarea>
       </mat-form-field>
-      <mat-form-field class = "tp-full-width">
-        <input matInput placeholder = "Email" [formControl] = "emailFormControl">
-        <mat-error *ngIf = "emailFormControl.hasError('email') 
+      <mat-form-field class="tp-full-width">
+        <input matInput placeholder="Email" [formControl]="emailFormControl">
+        <mat-error *ngIf="emailFormControl.hasError('email') 
           && !emailFormControl.hasError('required')">
           Please enter a valid email address
         </mat-error>
-        <mat-error *ngIf = "emailFormControl.hasError('required')">
+        <mat-error *ngIf="emailFormControl.hasError('required')">
           Email is <strong>required</strong>
         </mat-error>
       </mat-form-field>
     </form>
-    <mat-radio-group class = "tp-radio-group" [(ngModel)] = "favoriteSeason">
-      <mat-radio-button class = "tp-radio-button"
-        *ngFor = "let season of seasons" [value] = "season">
+    <mat-radio-group class="tp-radio-group" [(ngModel)]="favoriteSeason">
+      <mat-radio-button class="tp-radio-button"
+        *ngFor="let season of seasons" [value]="season">
         {{season}}
       </mat-radio-button>
     </mat-radio-group>
-    <div class = "tp-selected-value">
+    <div class="tp-selected-value">
       Selected Season: {{favoriteSeason}}
     </div>
     <form>
       <h4>Mat Select</h4>
       <mat-form-field>
-        <mat-select placeholder = "Favorite Food"
-          [(ngModel)] = "selectedValue" name = "food">
-          <mat-option *ngFor = "let food of foods"
-            [value] = "food.value">
+        <mat-select placeholder="Favorite Food"
+          [(ngModel)]="selectedValue" name="food">
+          <mat-option *ngFor="let food of foods"
+            [value]="food.value">
             {{food.display}}
           </mat-option>
         </mat-select>
@@ -141,34 +141,34 @@
       <p>Selected food: {{selectedValue}}</p>
     </form>
     <mat-slider
-      class = "tp-margin"
-      [disabled] = "secondDisabled"
-      [invert] = "invert"
-      [thumbLabel] = "thumbLabel"
-      [(ngModel)] = "value"
-      [vertical] = "vertical"
+      class="tp-margin"
+      [disabled]="secondDisabled"
+      [invert]="invert"
+      [thumbLabel]="thumbLabel"
+      [(ngModel)]="value"
+      [vertical]="vertical"
     >
     </mat-slider>
-    <section class = "tp-section">
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "thumbLabel">Show thumb label</mat-checkbox>
+    <section class="tp-section">
+      <mat-checkbox class="tp-margin" [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
     </section>
-    <section class = "tp-section">
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "vertical">Vertical</mat-checkbox>
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "invert">Inverted</mat-checkbox>
+    <section class="tp-section">
+      <mat-checkbox class="tp-margin" [(ngModel)]="vertical">Vertical</mat-checkbox>
+      <mat-checkbox class="tp-margin" [(ngModel)]="invert">Inverted</mat-checkbox>
     </section>
-    <section class = "tp-section">
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "secondDisabled">Disabled</mat-checkbox>
+    <section class="tp-section">
+      <mat-checkbox class="tp-margin" [(ngModel)]="secondDisabled">Disabled</mat-checkbox>
     </section>
     <mat-slide-toggle
-      class = "tp-margin"
-      [checked] = "thirdChecked"
-      [disabled] = "thirdDisabled"
+      class="tp-margin"
+      [checked]="thirdChecked"
+      [disabled]="thirdDisabled"
     >
     Slide!
     </mat-slide-toggle>
-    <section class = "tp-section">
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "thirdChecked">Checked</mat-checkbox>
-      <mat-checkbox class = "tp-margin" [(ngModel)] = "thirdDisabled">Disabled</mat-checkbox>
+    <section class="tp-section">
+      <mat-checkbox class="tp-margin" [(ngModel)]="thirdChecked">Checked</mat-checkbox>
+      <mat-checkbox class="tp-margin" [(ngModel)]="thirdDisabled">Disabled</mat-checkbox>
     </section>
     <mat-card class="tp-card">
       <mat-card-header>
@@ -210,33 +210,33 @@
     </mat-expansion-panel>
     <mat-grid-list cols="5" rowHeight="100px">
       <mat-grid-tile
-        [colspan] = "4"
-        [rowspan] = "1"
+        [colspan]="4"
+        [rowspan]="1"
       >
         1
       </mat-grid-tile>
       <mat-grid-tile
-        [colspan] = "1"
-        [rowspan] = "2"
+        [colspan]="1"
+        [rowspan]="2"
       >
         2
       </mat-grid-tile>
       <mat-grid-tile
-        [colspan] = "1"
-        [rowspan] = "1"
+        [colspan]="1"
+        [rowspan]="1"
       >
         3
       </mat-grid-tile>
       <mat-grid-tile
-        [colspan] = "3"
-        [rowspan] = "1"
+        [colspan]="3"
+        [rowspan]="1"
       >
         4
       </mat-grid-tile>
     </mat-grid-list>
-    <mat-horizontal-stepper [linear] = "isLinear" #stepper>
-      <mat-step [stepControl] = "firstFormGroup">
-        <form [formGroup] = "firstFormGroup">
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Enter your name</ng-template>
           <mat-form-field>
             <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
@@ -271,14 +271,14 @@
       <mat-tab label="2">Chuối</mat-tab>
       <mat-tab label="3">Cà rốt</mat-tab>
     </mat-tab-group>
-    <mat-tree [dataSource] = "dataSource" [treeControl] = "treeControl">
-      <mat-tree-node *matTreeNodeDef = "let node" matTreeNodeToggle matTreeNodePadding>
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+      <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
         <button mat-icon-button disabled></button>
         {{node.filename}} : {{node.type}}
       </mat-tree-node>
-      <mat-tree-node *matTreeNodeDef = "let node;when: hasChild" matTreeNodePadding>
-        <button mat-icon-button matTreeNodeToggle [attr.aria-label] = "'toggle ' + node.filename">
-          <mat-icon class = "mat-icon-rtl-mirror">
+      <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.filename">
+          <mat-icon class="mat-icon-rtl-mirror">
             {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
           </mat-icon>
         </button>
@@ -437,7 +437,7 @@
       [length]="100"
       [pageSize]="10"
       [pageSizeOptions]="[5, 10, 25, 50, 100]"
-      (page)="pageEvent = $event">
+      (page)="pageEvent=$event">
     </mat-paginator>
     <div *ngIf="pageEvent">
       <h5>Page Changed Event</h5>
